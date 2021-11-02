@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CareDriver</string>
+    <string name="bullet_point">\u2022</string>
+    <string name="dash">\u2014</string>
+    <string name="estimated">ESTIMATED</string>
+    <string name="est">est.</string>
+    <plurals name="rider">
+        <item quantity="zero" />
+        <item quantity="one">%d rider</item>
+        <item quantity="other">%d riders</item>
+    </plurals>
+    <plurals name="booster">
+        <item quantity="zero" />
+        <item quantity="one">%d booster</item>
+        <item quantity="other">%d boosters</item>
+    </plurals>
+</resources>
