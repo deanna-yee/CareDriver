@@ -9,9 +9,9 @@
         android:radius="360dp"/>
 
     <padding
-        android:top="@dimen/space_margin"
-        android:bottom="@dimen/space_margin"
-        android:left="@dimen/space_margin"
-        android:right="@dimen/space_margin"/>
+        android:top="@dimen/small_margin"
+        android:bottom="@dimen/small_margin"
+        android:left="@dimen/small_margin"
+        android:right="@dimen/small_margin"/>
 
 </shape>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="mainTextStyle">
+    <style name="blueTextStyle">
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/midnight_blue</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
     <style name="textStyle">
@@ -15,4 +16,5 @@
     <style name="textStyle14" parent="textStyle">
         <item name="android:textSize">14sp</item>
     </style>
+
 </resources>

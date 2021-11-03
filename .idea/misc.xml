@@ -5,10 +5,12 @@
       <map>
         <entry key="app/src/main/res/drawable/rounded_corners.xml" value="0.12291666666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_my_rides.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_trip_header.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_rides.xml" value="0.10260416666666666" />
+        <entry key="app/src/main/res/layout/fragment_trip_header.xml" value="0.45588235294117646" />
         <entry key="app/src/main/res/layout/rides_view.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/waypoint_view.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/waypoint_view.xml" value="0.335" />
       </map>
     </option>
   </component>
