@@ -63,12 +63,11 @@
 
         <TextView
             android:id="@+id/price_text"
-            style="@style/mainTextStyle"
+            style="@style/blueTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin"
             android:text="$105.25"
-            android:textSize="16sp"
             app:layout_constraintBaseline_toBaselineOf="@id/start_time_text"
             app:layout_constraintEnd_toEndOf="parent"
              />
@@ -82,7 +81,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/price_text" />
+            app:layout_constraintTop_toBottomOf="@id/start_time_text" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
