@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="headerInfo"
+            type="com.deannayee.caredriver.network.models.HeaderInfo" />
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".header.TripHeaderFragment">
+
+            <TextView
+                android:id="@+id/date_text"
+                style="@style/blueTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:textStyle="bold"
+                android:text="@{headerInfo.displayDate()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Thu 6/17" />
+
+            <TextView
+                android:id="@+id/bullet_point"
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:text="@string/bullet_point"
+                app:layout_constraintBaseline_toBaselineOf="@id/date_text"
+                app:layout_constraintStart_toEndOf="@id/date_text" />
+
+            <TextView
+                android:id="@+id/time_text"
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:timeSet="@{headerInfo.displayTime()}"
+                app:layout_constraintBaseline_toBaselineOf="@id/date_text"
+                app:layout_constraintStart_toEndOf="@id/bullet_point"
+                tools:text="4:18a - 4:18pm" />
+
+            <TextView
+                android:id="@+id/estimated_label"
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/margin"
+                android:text="@string/estimated"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/price_text"
+                style="@style/blueTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:text="@{headerInfo.displayPrice()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/estimated_label"
+                app:layout_constraintStart_toStartOf="@id/estimated_label"
+                app:layout_constraintTop_toBottomOf="@id/estimated_label"
+                tools:text="$105.25" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

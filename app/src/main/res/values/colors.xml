@@ -13,6 +13,7 @@
     <color name="dark_turquoise">#24b5e2</color>
     <color name="gray">#4b595b</color>
     <color name="light_gray">#778688</color>
+    <color name="gray_white">#d9dce0</color>
     <color name="dark_gray">#233032</color>
     <color name="red">#ff0000</color>
 </resources>

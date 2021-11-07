@@ -5,16 +5,26 @@
     <string name="estimated">ESTIMATED</string>
     <string name="est">est.</string>
     <plurals name="rider">
-        <item quantity="zero" />
         <item quantity="one">%d rider</item>
         <item quantity="other">%d riders</item>
     </plurals>
     <plurals name="booster">
-        <item quantity="zero" />
         <item quantity="one">%d booster</item>
         <item quantity="other">%d boosters</item>
     </plurals>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <plurals name="minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <string name="riders_booster_info">(%1$s \u2022 %2$s)</string>
+    <string name="riders_info">(%s)</string>
+    <string name="boosters_info">(%s)</string>
     <string name="cancel_this_trip">Cancel This Trip</string>
+    <string name="in_series">"This is part of a series"</string>
+    <string name="miles">%1$.2f mi</string>
+    <string name="summary">Trip ID: %1$d \u2022 %2$s \u2022 %3$s</string>
+    <string name="pickup">Pickup</string>
+    <string name="dropoff">Drop-off</string>
+    <string name="my_rides">My Rides</string>
+    <string name="ride_details">Ride Details</string>
 </resources>

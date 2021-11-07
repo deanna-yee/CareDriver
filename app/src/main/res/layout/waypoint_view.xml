@@ -1,88 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/margin">
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="wayPoint"
+            type="com.deannayee.caredriver.network.models.WayPoint" />
+        <variable
+            name="waypointType"
+            type="String" />
+        <variable
+            name="viewmodel"
+            type="com.deannayee.caredriver.myrides.RidesViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/start_time_text"
-            style="@style/textStyle14"
+        <ImageView
+            android:id="@+id/anchor_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin"
-            android:text="4:18a"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/margin"
+            app:isAnchored="@{wayPoint.anchor}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/anchor" />
+
+        <TextView
+            android:id="@+id/pickup_dropoff"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_margin"
+            android:layout_marginStart="@dimen/small_margin"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/waypoints_text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:text="@{waypointType}"
+            app:layout_constraintBottom_toBottomOf="@id/anchor_image"
+            app:layout_constraintStart_toEndOf="@+id/anchor_image"
+            tools:text="Pickup" />
 
         <TextView
-            android:id="@+id/dash"
-            style="@style/textStyle14"
+            android:id="@+id/location"
+            style="@style/textStyle16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/space_margin"
-            android:text="@string/dash"
-            app:layout_constraintBaseline_toBaselineOf="@id/start_time_text"
-            app:layout_constraintStart_toEndOf="@id/start_time_text" />
-
-        <TextView
-            android:id="@+id/end_time_text"
-            style="@style/textStyle14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/space_margin"
-            android:text="4:18p"
-            app:layout_constraintBaseline_toBaselineOf="@id/start_time_text"
-            app:layout_constraintStart_toEndOf="@id/dash" />
-
-        <TextView
-            android:id="@+id/passengers_number"
-            style="@style/textStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/space_margin"
-            android:text="(1 rider)"
-            app:layout_constraintBaseline_toBaselineOf="@id/start_time_text"
-            app:layout_constraintStart_toEndOf="@id/end_time_text" />
-
-        <TextView
-            style="@style/textStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/space_margin"
-            android:text="@string/est"
-            app:layout_constraintBaseline_toBaselineOf="@id/start_time_text"
-            app:layout_constraintEnd_toStartOf="@id/price_text" />
-
-        <TextView
-            android:id="@+id/price_text"
-            style="@style/blueTextStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin"
-            android:text="$105.25"
-            app:layout_constraintBaseline_toBaselineOf="@id/start_time_text"
-            app:layout_constraintEnd_toEndOf="parent"
-             />
-
-        <TextView
-            android:id="@+id/waypoints_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin"
-            android:text="TextView"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:text="@{wayPoint.location.address}"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/start_time_text" />
-
+            app:layout_constraintStart_toStartOf="@id/pickup_dropoff"
+            app:layout_constraintTop_toBottomOf="@id/pickup_dropoff"
+            tools:text="1 World Way, Los Angeles 90026" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-</com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="ride"
+            type="com.deannayee.caredriver.network.models.Ride" />
+    </data>
+        <LinearLayout
+            android:id="@+id/rides_info_view"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/header_container"
-        android:name="com.deannayee.caredriver.header.TripHeaderFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <include
+                android:id="@+id/header_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/header_view"
+                app:headerInfo="@{ride}"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/waypoints_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-</LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trips_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:tripData="@{ride.trips}"/>
+        </LinearLayout>
+</layout>

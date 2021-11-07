@@ -3,11 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/detailFragment">
-
+    android:label="Ride Details"
+    app:startDestination="@id/ridesFragment">
+    <fragment
+        android:id="@+id/ridesFragment"
+        android:name="com.deannayee.caredriver.myrides.RidesFragment"
+        android:label="My Rides"
+        tools:layout="@layout/fragment_rides">
+        <action
+            android:id="@+id/action_ridesFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.deannayee.caredriver.detail.DetailFragment"
-        android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        android:label="Ride Details"
+        tools:layout="@layout/fragment_detail">
+        <action
+            android:id="@+id/cancel_trip"
+            app:destination="@id/ridesFragment"
+            app:popUpTo="@id/ridesFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="ridePosition"
+            app:argType="integer" />
+        <argument
+            android:name="tripPosition"
+            app:argType="integer" />
+    </fragment>
 </navigation>
