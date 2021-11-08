@@ -6,14 +6,11 @@ import android.text.SpannableString
 import android.text.style.StyleSpan
 import android.view.View
 import android.widget.ImageView
-import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.deannayee.caredriver.R
-import com.deannayee.caredriver.myrides.TripApiStatus
-import com.deannayee.caredriver.network.models.Ride
 import com.deannayee.caredriver.network.models.Trip
 import com.deannayee.caredriver.network.models.WayPoint
 

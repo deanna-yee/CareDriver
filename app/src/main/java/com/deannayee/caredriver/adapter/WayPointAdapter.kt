@@ -5,9 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.deannayee.caredriver.databinding.RidesViewBinding
 import com.deannayee.caredriver.databinding.WaypointViewBinding
-import com.deannayee.caredriver.network.models.Ride
 import com.deannayee.caredriver.network.models.WayPoint
 
 class WayPointAdapter: ListAdapter<WayPoint, WayPointAdapter.WayPointViewHolder>(DiffCallback) {
