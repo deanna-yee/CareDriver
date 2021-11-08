@@ -68,32 +68,6 @@ fun bindAnchorImage(imageView: ImageView, anchor: Boolean){
     imageView.setImageDrawable(image)
 }
 
-
-@BindingAdapter("tripApiStatusError")
-fun bindStatus(statusImageView: ImageView, status: TripApiStatus?) {
-    when (status) {
-        TripApiStatus.ERROR -> {
-            statusImageView.visibility = View.VISIBLE
-            statusImageView.setImageResource(R.drawable.ic_connection_error)
-        }
-        else -> {
-            statusImageView.visibility = View.GONE
-        }
-    }
-}
-
-@BindingAdapter("tripApiStatus")
-fun bindStatus(statusProgress: ProgressBar, status: TripApiStatus?) {
-    when (status) {
-        TripApiStatus.LOADING -> {
-            statusProgress.visibility = View.VISIBLE
-        }
-        else -> {
-            statusProgress.visibility = View.GONE
-        }
-    }
-}
-
 @BindingAdapter("ridersSet")
 fun bindRiders(textView: TextView, trip: Trip){
     val context = textView.context
