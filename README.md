@@ -8,8 +8,8 @@
   <li>Material Design</li>
 </ul>
 
-<h2>Android APK Link</li>
-<a href="https://github.com/deanna-yee/CareDriver/tree/master/app/release"> APK File for CareDriver App</a>
+<h2>Android APK Link</h2>
+<a href="https://github.com/deanna-yee/CareDriver/blob/master/app/release/app-release.apk"> APK File for CareDriver App</a>
 
 <h2>Notes</h2>
 <ul>
@@ -30,4 +30,6 @@
   <li>I would add that the trip would also be deleted from the database by using the api to post the deleted trip</li>
   <li>Add the ability to tap the start and end marker to see the location associated with it</li>
   <li>Test to make sure it would say the number of boosters when there are no riders other than ones with boosters</li>
+  <li>Add indicators like a spinning wheel progress when loading and nothing is on the screen</li>
+  <li>Add indicator or message when there is an error getting the data from the api</li>
 </ul>
