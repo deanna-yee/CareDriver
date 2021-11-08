@@ -31,5 +31,5 @@
   <li>Add the ability to tap the start and end marker to see the location associated with it</li>
   <li>Test to make sure it would say the number of boosters when there are no riders other than ones with boosters</li>
   <li>Add indicators like a spinning wheel progress when loading and nothing is on the screen</li>
-  <li>Add indicator or message when there is an error getting the data from the api<li>
+  <li>Add indicator or message when there is an error getting the data from the api</li>
 </ul>
