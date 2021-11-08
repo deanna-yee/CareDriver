@@ -8,7 +8,7 @@
   <li>Material Design</li>
 </ul>
 
-<h2>Android APK Link</li>
+<h2>Android APK Link</h2>
 <a href="https://github.com/deanna-yee/CareDriver/tree/master/app/release"> APK File for CareDriver App</a>
 
 <h2>Notes</h2>
