@@ -9,7 +9,7 @@
 </ul>
 
 <h2>Android APK Link</h2>
-<a href="https://github.com/deanna-yee/CareDriver/tree/master/app/release"> APK File for CareDriver App</a>
+<a href="https://github.com/deanna-yee/CareDriver/blob/master/app/release/app-release.apk"> APK File for CareDriver App</a>
 
 <h2>Notes</h2>
 <ul>
